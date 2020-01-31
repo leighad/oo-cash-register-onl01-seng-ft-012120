@@ -38,4 +38,15 @@ class CashRegister
         end
     @items  
     end
+
+    # def remove_last_item(title, price, quantity = 1)
+    #     cost = price * quantity
+    #     @total -= cost
+    #     # @total < 0 ? @total = 0 : @total 
+    #     # @total 
+    #     quantity.times do
+    #         @items.delete(title)
+    #     end
+    #     @items
+    # end
 end
