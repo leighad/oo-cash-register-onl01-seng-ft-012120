@@ -87,5 +87,14 @@ describe 'CashRegister' do
       expect{cash_register.void_last_transaction}.to change{cash_register.total}.from(3.52).to(0.0)
     end
   end
+
+  describe '#pop_last_transaction' do    
+    it 'subtracts the last transaction from items' do
+      cash_register.add_item("apple", 0.99)
+      cash_register.add_item("tomato", 1.76, 3)
+      cash_register.pop_last_transaction("tomato", 3)
+      expect(cash_register.items).to eq(["apple"])
+    end 
+  end
 end
 
